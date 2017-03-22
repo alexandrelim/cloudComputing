@@ -14,7 +14,7 @@ module.exports = function(params) {
 		self.bot.postMessageToUser('alexandre', 'meow!', params); 
 		self.bot.on('start', this.onStart);
 		self.bot.on('message', this.onEvent);
-		setTimeout(jokes()},2000);
+		setTimeout(jokes(),2000);
 	}
 	var myid = 0;
 	this.onStart = function() {
