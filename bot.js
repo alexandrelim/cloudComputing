@@ -22,7 +22,7 @@ module.exports = function(params) {
 		if(event.type=='message' 
 			&& event.channel.charAt(0) == 'D' 
 			&& !event.bot_id) {
-			self.bot.postMessageToUser(event.channel, 'Reception d\'un message!', params);
+			self.bot.postMessageToChannel(event.channel, 'Reception d\'un message!', params);
 		}
 	}
 }
