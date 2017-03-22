@@ -14,7 +14,9 @@ module.exports = function(params) {
 	}
 	this.onStart = function() {
 		console.log("Started")
-
+		self.bot.getUser(self.bot.self.name).then(function(user) {
+			var usr = user;
+		});
 	}
 	this.onEvent = function(event) {
 
@@ -30,12 +32,20 @@ module.exports = function(params) {
 		&& event.channel.charAt(0) == 'D' 
 		}*/
 		if(event.type=='message' 
-			&& !event.bot_id ) {
-			setTimeout(function(){
+			&& event.user != self) {
+
+			if(!event.bot_id){}
+				setTimeout(function(){
+					self.bot.postMessage(event.channel, 
+										'Hellow bot', 
+										params);
+				},2000);
+			}else{
 				self.bot.postMessage(event.channel, 
 									'Hellow you :3', 
 									params);
-			},3000);
+				
+			}
 		}
 	}
 }
