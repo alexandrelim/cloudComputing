@@ -1,0 +1,17 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "tp Cloud Computing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha"
+  },
+  "author": "Alexandre Lim",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "mocha": "^3.2.0",
+    "slackbots": "^1.0.2"
+  }
+}
