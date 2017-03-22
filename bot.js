@@ -18,11 +18,16 @@ module.exports = function(params) {
 	}
 	this.onEvent = function(event) {
 		//reception d'un message
+		var params = {
+	        
+    	};
 		console.log(event);
 		if(event.type=='message' 
 			&& event.channel.charAt(0) == 'D' 
 			&& !event.bot_id) {
-			self.bot.postMessageToChannel(event.channel, 'Reception d\'un message!', params);
+			self.bot.postMessageToChannel(event.channel, 
+										'Reception d\'un message!', 
+										params);
 		}
 	}
 }
