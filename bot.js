@@ -14,7 +14,7 @@ module.exports = function(params) {
 		self.bot.on('message', this.onEvent);
 		
 	}
-	var myid = ;
+	var myid = 0;
 	this.onStart = function() {
 		console.log("Started")
 
@@ -34,9 +34,10 @@ module.exports = function(params) {
     		self.bot.postMessageToUser("alexandre", 
 								event, 
 								params);
-		&& event.channel.charAt(0) == 'D' 
+		
 		}*/
 		if(event.type=='message' 
+			&& event.channel.charAt(0) == 'D' 
 			&& event.user != myid) {
 
 			if(event.bot_id){
