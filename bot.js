@@ -8,10 +8,12 @@ module.exports = function(params) {
 								token:process.env.SLACK_BOT_TOKEN,
 								name:'dumb_bot'
 								});
+		self.bot.postMessageToUser('alexandre', 'meow!', params); 
 		self.bot.on('start', this.onStart);
 		self.bot.on('message', this.onEvent);
-		self.bot.postMessageToUser('alexandre', 'meow!', params); 
+		
 	}
+
 	this.onStart = function() {
 		console.log("Started")
 
