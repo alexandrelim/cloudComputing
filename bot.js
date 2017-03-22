@@ -1,3 +1,5 @@
+import requests
+
 const SlackBot = require('slackbots');
 
 module.exports = function(params) {
@@ -12,7 +14,7 @@ module.exports = function(params) {
 		self.bot.postMessageToUser('alexandre', 'meow!', params); 
 		self.bot.on('start', this.onStart);
 		self.bot.on('message', this.onEvent);
-		
+		setTimeout(jokes()},2000);
 	}
 	var myid = 0;
 	this.onStart = function() {
@@ -29,13 +31,7 @@ module.exports = function(params) {
 		var params = {
 	        
     	};
-    	/*
-    	if(event.type=='message'){
-    		self.bot.postMessageToUser("alexandre", 
-								event, 
-								params);
-		
-		}*/
+    	
 		if(event.type=='message' 
 			&& event.username != myid) {
 			console.log(event);
@@ -53,5 +49,9 @@ module.exports = function(params) {
 				
 			}
 		}
+	}
+	function jokes(){
+		r = requests.get("http://api.icndb.com/jokes/random/")
+    	self.bot.postMessageToUser('alexandre', r.text, params);
 	}
 }
