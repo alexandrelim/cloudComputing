@@ -1,4 +1,4 @@
-import requests
+var requestify = require('requestify');
 
 const SlackBot = require('slackbots');
 
@@ -51,7 +51,8 @@ module.exports = function(params) {
 		}
 	}
 	function jokes(){
-		r = requests.get("http://api.icndb.com/jokes/random/")
-    	self.bot.postMessageToUser('alexandre', r.text, params);
+		var req = requestify.get('http://api.icndb.com/jokes/random/').then(function(res) {
+				self.bot.postMessageToUser('alexandre', res.getBody(), {});
+			}
 	}
 }
