@@ -19,9 +19,9 @@ module.exports = function(params) {
 	this.onEvent = function(event) {
 		//reception d'un message
 		console.log(event);
-		if(data.type=='message' 
-			&& data.channel.charAt(0) == 'D' 
-			&& !data.bot_id) {
+		if(event.type=='message' 
+			&& event.channel.charAt(0) == 'D' 
+			&& !event.bot_id) {
 			self.bot.postMessageToUser('alexandre', 'Reception d\'un massage!', params);
 		}
 	}
