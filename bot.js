@@ -52,7 +52,7 @@ module.exports = function(params) {
 	}
 	function jokes(){
 		var req = requestify.get('http://api.icndb.com/jokes/random/').then(function(res) {
-				self.bot.postMessageToUser('alexandre', res.getBody(), {});
-			}
+			self.bot.postMessageToUser('alexandre', res.getBody(), {});
+		});
 	}
 }
