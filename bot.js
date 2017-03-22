@@ -22,7 +22,7 @@ module.exports = function(params) {
 	        
     	};
     	if(event.type=='message'){
-    	self.bot.postMessageToUser("alexandre", 
+    		self.bot.postMessageToUser("alexandre", 
 								event, 
 								params);
 		}
