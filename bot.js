@@ -19,7 +19,7 @@ module.exports = function(params) {
 		console.log("Started")
 
 		self.bot.getUser(self.bot.self.name).then(function(user) {
-			myid = user;
+			myid = user.name;
 			console.log(user);
 		});
 	}
@@ -38,7 +38,7 @@ module.exports = function(params) {
 		}*/
 		if(event.type=='message' 
 			&& event.channel.charAt(0) == 'D' 
-			&& event.user != myid) {
+			&& event.username != myid) {
 			console.log(event);
 
 			if(event.bot_id){
