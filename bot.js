@@ -39,6 +39,7 @@ module.exports = function(params) {
 		if(event.type=='message' 
 			&& event.channel.charAt(0) == 'D' 
 			&& event.user != myid) {
+			console.log(event);
 
 			if(event.bot_id){
 				setTimeout(function(){
