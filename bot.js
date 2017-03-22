@@ -3,7 +3,6 @@ const SlackBot = require('slackbots');
 module.exports = function(params) {
 	this.bot = null;
 	var self = this;
-	
 	this.connect = function() {
 		self.bot = new SlackBot({
 								token:process.env.SLACK_BOT_TOKEN,
@@ -39,7 +38,7 @@ module.exports = function(params) {
 		if(event.type=='message' 
 			&& event.user != myid) {
 
-			if(!event.bot_id){
+			if(!event.bot_id){}
 				setTimeout(function(){
 					self.bot.postMessage(event.channel, 
 										'Hellow bot', 
