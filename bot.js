@@ -3,6 +3,7 @@ const SlackBot = require('slackbots');
 module.exports = function(params) {
 	this.bot = null;
 	var self = this;
+	var myid = "";
 	this.connect = function() {
 		self.bot = new SlackBot({
 								token:process.env.SLACK_BOT_TOKEN,
@@ -18,7 +19,7 @@ module.exports = function(params) {
 		console.log("Started")
 
 		self.bot.getUser(self.bot.self.name).then(function(user) {
-			var myid = user;
+			myid = user;
 
 		});
 	}
