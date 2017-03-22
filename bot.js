@@ -14,7 +14,7 @@ module.exports = function(params) {
 		self.bot.on('message', this.onEvent);
 		
 	}
-	var myid = 0;
+	var myid = ;
 	this.onStart = function() {
 		console.log("Started")
 
