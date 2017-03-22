@@ -19,5 +19,6 @@ module.exports = function(params) {
 	this.onEvent = function(event) {
 		//reception d'un message
 		console.log(event);
+		self.bot.postMessageToUser('alexandre', 'Reception d\'un massage!', params);
 	}
 }
