@@ -37,7 +37,6 @@ module.exports = function(params) {
 		
 		}*/
 		if(event.type=='message' 
-			&& event.channel.charAt(0) == 'D' 
 			&& event.username != myid) {
 			console.log(event);
 
