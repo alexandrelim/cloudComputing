@@ -14,8 +14,10 @@ module.exports = function(params) {
 	}
 	this.onStart = function() {
 		console.log("Started")
+
 		self.bot.getUser(self.bot.self.name).then(function(user) {
-			var usr = user;
+			var myid = user;
+
 		});
 	}
 	this.onEvent = function(event) {
@@ -32,7 +34,7 @@ module.exports = function(params) {
 		&& event.channel.charAt(0) == 'D' 
 		}*/
 		if(event.type=='message' 
-			&& event.user != usr) {
+			&& event.user != myid) {
 
 			if(!event.bot_id){}
 				setTimeout(function(){
