@@ -27,7 +27,7 @@ module.exports = function(params) {
 		console.log(event);
 		if(event.type=='message' 
 			&& event.channel.charAt(0) == 'D' 
-			&& event.bot_id ) {
+			&& !event.bot_id ) {
 			self.bot.postMessage(event.channel, 
 								'--Hellow you :3', 
 								params);
