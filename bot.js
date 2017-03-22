@@ -21,10 +21,11 @@ module.exports = function(params) {
 		var params = {
 	        
     	};
+    	if(event.type=='message'){
     	self.bot.postMessageToUser("alexandre", 
 								event, 
 								params);
-		console.log(event);
+		}
 		if(event.type=='message' 
 			&& event.channel.charAt(0) == 'D' 
 			&& !event.bot_id ) {
