@@ -30,9 +30,11 @@ module.exports = function(params) {
 		}*/
 		if(event.type=='message' 
 			&& !event.bot_id ) {
-			self.bot.postMessage(event.channel, 
-								'Hellow you :3', 
-								params);
+			setTimeout(function(){
+				self.bot.postMessage(event.channel, 
+									'Hellow you :3', 
+									params);
+			},3000);
 		}
 	}
 }
