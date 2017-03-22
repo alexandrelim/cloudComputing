@@ -20,7 +20,7 @@ module.exports = function(params) {
 
 		self.bot.getUser(self.bot.self.name).then(function(user) {
 			myid = user;
-
+			console.log(user);
 		});
 	}
 	this.onEvent = function(event) {
