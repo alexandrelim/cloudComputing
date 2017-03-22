@@ -17,6 +17,7 @@ module.exports = function(params) {
 
 	}
 	this.onEvent = function(event) {
+
 		//reception d'un message
 		var params = {
 	        
@@ -30,10 +31,13 @@ module.exports = function(params) {
 		}*/
 		if(event.type=='message' 
 			&& !event.bot_id ) {
+			if (self.bool == 1) break;
+			self.bool = 1;
 			setTimeout(function(){
 				self.bot.postMessage(event.channel, 
 									'Hellow you :3', 
 									params);
+				self.bool = 0;
 			},3000);
 		}
 	}
