@@ -29,7 +29,7 @@ module.exports = function(params) {
 			&& event.channel.charAt(0) == 'D' 
 			&& event.bot_id ) {
 			self.bot.postMessage(event.channel, 
-								'Hellow you :3', 
+								'--Hellow you :3', 
 								params);
 		}
 	}
