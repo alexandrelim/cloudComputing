@@ -38,7 +38,7 @@ module.exports = function(params) {
 		if(event.type=='message' 
 			&& event.user != myid) {
 
-			if(!event.bot_id){}
+			if(!event.bot_id){
 				setTimeout(function(){
 					self.bot.postMessage(event.channel, 
 										'Hellow bot', 
